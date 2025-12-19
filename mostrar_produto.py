@@ -40,9 +40,9 @@ def mostrar_produto(codigo: int):
             st.subheader(f'Produto: {nome}')
             st.subheader(f'Preço: R$ {str(preco).replace(".", ",")}0')
             quantidade = st.number_input(
-                label=f'Máx: {dic_requisicao["estoque"]}',
+                label=f'Máx: {int(dic_requisicao["estoque"])}',
                 min_value=1,
-                max_value=dic_requisicao['estoque']
+                max_value=int(dic_requisicao['estoque'])
             )
 
             adicionar = st.button(
